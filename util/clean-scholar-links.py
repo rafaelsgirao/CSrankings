@@ -13,7 +13,6 @@ from collections import *
 
 import time
 import codecs
-import sys
 
 
 def csv2dict_str_str(fname):

@@ -1,11 +1,6 @@
 # Clean up the homepages (remove dups and sort).
 
-import sys
-import urllib2
 import csv
-import operator
-import re
-from time import sleep
 
 
 def csv2dict_str_str(fname):

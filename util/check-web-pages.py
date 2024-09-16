@@ -8,10 +8,8 @@ import time
 import random
 import urllib2
 import csv
-import operator
 import re
 import google
-from time import sleep
 
 
 def csv2dict_str_str(fname):
@@ -22,8 +20,6 @@ def csv2dict_str_str(fname):
         d = {rows[0].strip(): rows[1].strip() for rows in reader}
     return d
 
-
-import requests
 
 facultydict = csv2dict_str_str("faculty-affiliations.csv")
 homepages = csv2dict_str_str("homepages.csv")
@@ -129,7 +125,7 @@ with codecs.open("homepages.csv", "a", "utf8") as outfile:
                     appendfile.write(name + "," + s + "\n")
                     appendfile.flush()
                 else:
-                    if not (name in homepages):
+                    if name not in homepages:
                         # It's a new name, what are you gonna do (even if it is a
                         # Google link, include it).
                         print(name + "," + actualURL)

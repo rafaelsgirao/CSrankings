@@ -25,7 +25,7 @@ for i in row_box:
         name = HumanName(name)
         if len(name.first) == 1:
             name.first = name.first + "."
-        if name.middle is not "":
+        if name.middle != "":
             if len(name.middle) == 1:
                 name.middle += "."
             names[name.first + " " + name.middle + " " + name.last] = year
